@@ -1,5 +1,5 @@
-.content {
-    grid-area: c;
-    background-color: #aec4ec;
+.content__img {
+    display: block;
+    height: 100px;
 }
 

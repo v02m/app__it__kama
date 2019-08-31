@@ -120,6 +120,17 @@ git push -u origin master
 
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 
+### Пропсы
+
+Компонента этофункция возвращающая разметку(JSX) <br>
+or
+Компонента -это тег <br>
+
+и которая принимает параметр props
+
+Константой считается переменная, значение которой не может быть изменено
+
+
 
 
 
