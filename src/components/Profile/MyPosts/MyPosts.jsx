@@ -7,11 +7,15 @@ import  {variable} from "../../variable";
 
 const MyPosts = () => {
     return (
-        <div>
-            My posts
-            <div>
-                <textarea></textarea>
-                <button>Add post</button>
+        <div className={s.postsBlock}>
+            <h3> My posts</h3>
+            <div className={s.areaBlock}>
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <button>Add post</button>
+                </div>
             </div>
             <div className={s.posts}>
                 <Post message ="Hi, how are you?" outLike="6" />
