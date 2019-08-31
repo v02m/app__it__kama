@@ -8,9 +8,9 @@ const Post = (props) => {
         <div className={s.item}>
             <img src='https://movies4maniacs.liberty.me/wp-content/uploads/sites/1218/2015/09/avatarsucks.jpg' alt="#" />
             {props.message}
-            <div>
+            <div className={s.likes}>
                 <span>Lke </span>
-                {props.outLike}
+                {props.countLike}
             </div>
         </div>
 
