@@ -26,7 +26,8 @@ const Message = (props) => {
 
 
 const Dialogs = (props) => {
-    let dialogData = [
+
+    let dialogs = [
         {id: 1, name: 'Dimych'},
         {id: 2, name: 'Andrey'},
         {id: 3, name: 'Sveta'},
@@ -35,7 +36,7 @@ const Dialogs = (props) => {
         {id: 6, name: 'Valera'},
     ];
 
-    let messageData = [
+    let messages = [
         {id: 1, message: 'Hi'},
         {id: 2, message: 'How are you it-kamaA'},
         {id: 3, message: 'Yo'},
@@ -44,21 +45,36 @@ const Dialogs = (props) => {
         {id: 5, message: 'YoV'},
     ];
 
+
+    let dialogsElemets = dialogs
+        .map( (d) => {
+            return (
+                <DialogItem name={d.name} id={d.id}/>
+            )
+
+    } );
+
+
+    let messagesElemets = messages.map( message => <Message message={message.message}/>);
+    
     return (
         <div className={s.dialogs}>
             <div className={s.dialogs__items}>
-               <DialogItem name={dialogData[0].name} id={dialogData[0].id}/>
-               <DialogItem name={dialogData[1].name} id={dialogData[1].id}/>
-               <DialogItem name="Sveta" id="3"/>
-               <DialogItem name="Sasha" id="4"/>
-               <DialogItem name="Viktor" id="5"/>
-               <DialogItem name="" id="6"/>
+                {dialogsElemets}
+                {/*<DialogItem name={dialogData[0].name} id={dialogData[0].id}/>
+                <DialogItem name={dialogData[1].name} id={dialogData[1].id}/>
+                <DialogItem name="Sveta" id="3"/>
+                <DialogItem name="Sasha" id="4"/>
+                <DialogItem name="Viktor" id="5"/>
+                <DialogItem name="Valerius" id="6"/>*/}
+
             </div> {/* end dialogs__item*/}
 
             <div className={s.messages}>
-                <Message message={messageData[0].message}/>
-                <Message message={messageData[1].message}/>
-                <Message message={messageData[2].message}/>
+                {messagesElemets}
+                <Message message={messages[0].message}/>
+                <Message message={messages[1].message}/>
+                <Message message={messages[2].message}/>
                 <Message message="qu"/>
                 <Message message="Yo"/>
             </div>
